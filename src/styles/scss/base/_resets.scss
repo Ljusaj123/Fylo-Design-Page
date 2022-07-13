@@ -20,19 +20,22 @@ h3 {
 }
 // h1 {
 // }
-// h2 {
-// }
+h2 {
+  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+}
 // h3 {
 // }
-// p {
-// }
+p {
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+}
 a {
   text-decoration: none;
+  color: v.$white-neutral;
+}
+li {
+  list-style: none;
 }
 
-header {
-  background-color: v.$dark-blue-header-and-email-back;
-}
 footer {
   background-color: v.$dark-blue-footer-back;
 }
