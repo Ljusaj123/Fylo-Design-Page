@@ -1,16 +1,18 @@
 @use "../base/" as *;
 
 .navigation {
-  @include universal-flex-display(end, flex-start);
+  justify-self: end;
+  width: clamp(200px, 50%, 400px);
 
   &-container {
     height: 100%;
     width: 100%;
-    max-width: 400px;
-    @include universal-flex-display(space-between, center);
+    @include universal-flex-display(space-evenly, center);
+  }
+}
 
-    .list .item:hover {
-      text-decoration: underline;
-    }
+@include media-750 {
+  .navigation {
+    justify-self: center;
   }
 }
