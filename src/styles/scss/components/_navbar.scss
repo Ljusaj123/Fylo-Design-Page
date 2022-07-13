@@ -9,12 +9,8 @@
     max-width: 400px;
     @include universal-flex-display(space-between, center);
 
-    .list .item {
-      font-size: 1.1rem;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    .list .item:hover {
+      text-decoration: underline;
     }
   }
 }
