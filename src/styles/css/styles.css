@@ -21,7 +21,9 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.3rem, 3.5vw, 2.7rem);
+  margin: 1.5rem 0;
+  line-height: 1.3;
 }
 
 h3 {
@@ -38,6 +40,9 @@ a {
   text-decoration: none;
   color: hsl(0deg, 0%, 100%);
 }
+a:hover {
+  text-decoration: underline;
+}
 
 li {
   list-style: none;
@@ -48,34 +53,28 @@ footer {
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-self: end;
+  width: clamp(200px, 50%, 400px);
 }
 .navigation-container {
   height: 100%;
   width: 100%;
-  max-width: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.navigation-container .list .item:hover {
-  text-decoration: underline;
-}
 
+@media screen and (max-width: 750px) {
+  .navigation {
+    justify-self: center;
+  }
+}
 .button {
   background-color: hsl(176deg, 68%, 64%);
   border-radius: 30px;
@@ -85,6 +84,7 @@ footer {
   border: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  z-index: 10;
 }
 .button:active {
   -webkit-transform: scale(0.9);
@@ -94,7 +94,7 @@ footer {
 header {
   background-color: hsl(217deg, 28%, 15%);
   position: relative;
-  height: 120vh;
+  height: 90vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,7 +111,8 @@ header .header-container {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
+  gap: 2rem;
 }
 header .header-container .logo-container {
   display: -webkit-box;
@@ -125,23 +126,26 @@ header .header-container .logo-container {
           align-items: center;
 }
 header .header-container .logo-container #logo {
-  width: clamp(50px, 50%, 200px);
+  width: clamp(100px, 50%, 200px);
 }
 header .header-container .intro-container {
   grid-column: 1/span 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: clamp(350px, 70%, 800px);
+  align-self: flex-start;
+  justify-self: center;
 }
 header .header-container .intro-container .intro-title {
   text-align: center;
@@ -156,6 +160,7 @@ header .header-container .intro-container .intro-text {
   max-width: 550px;
   text-align: center;
   z-index: 10;
+  margin-bottom: 2rem;
 }
 header .header-container #background-header {
   position: absolute;
@@ -170,6 +175,7 @@ header .header-container #background-header {
 @media screen and (max-width: 750px) {
   header {
     padding: 1rem;
+    height: 70vh;
   }
 }
 .services {
@@ -227,5 +233,78 @@ header .header-container #background-header {
 @media screen and (max-width: 750px) {
   .services .services-container {
     grid-template-columns: 1fr;
+  }
+}
+.features {
+  background-color: hsl(218deg, 28%, 13%);
+  width: 100%;
+  min-height: 80vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2rem;
+}
+.features-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.features-container .features-image-container {
+  width: clamp(200px, 70%, 700px);
+  margin-right: 4rem;
+}
+.features-container .features-image-container img {
+  width: 100%;
+}
+.features-container .features-text-container {
+  width: clamp(300px, 50%, 600px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.features-container .features-text-container #features-title {
+  max-width: 400px;
+}
+.features-container .features-text-container .features-text {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 750px) {
+  .features .features-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .features .features-container .features-image-container {
+    margin-bottom: 3rem;
+    margin-right: 0rem;
+  }
+  .features .features-container .features-text-container a {
+    color: hsl(176deg, 68%, 64%);
+    text-decoration: underline;
   }
 }
