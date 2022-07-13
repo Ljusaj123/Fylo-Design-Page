@@ -1,0 +1,50 @@
+@use "../base/" as *;
+
+.features {
+  background-color: $dark-blue-main-back;
+  width: 100%;
+  min-height: 80vh;
+  height: fit-content;
+  @include universal-flex-display(center, flex-start);
+  padding: 2rem;
+
+  &-container {
+    @include universal-flex-display(center, center);
+
+    .features-image-container {
+      width: clamp(200px, 70%, 700px);
+      margin-right: 4rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .features-text-container {
+      width: clamp(300px, 50%, 600px);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      #features-title {
+        max-width: 400px;
+      }
+
+      .features-text {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@include media-750 {
+  .features .features-container {
+    flex-direction: column;
+
+    .features-image-container {
+      margin-bottom: 3rem;
+      margin-right: 0rem;
+    }
+  }
+}
