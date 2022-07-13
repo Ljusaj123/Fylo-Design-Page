@@ -1,0 +1,16 @@
+@mixin universal-flex-display($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin media-750 {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+@mixin media-450 {
+  @media screen and (max-width: 450px) {
+    @content;
+  }
+}

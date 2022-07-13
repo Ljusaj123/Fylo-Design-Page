@@ -1,0 +1,38 @@
+@use "./variables" as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: v.$--white-neutral;
+  font-size: v.$--fs-root;
+  font-family: v.$--ff-body;
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$--ff-headings;
+}
+// h1 {
+// }
+// h2 {
+// }
+// h3 {
+// }
+// p {
+// }
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: v.$--dark-blue-header-and-email-back;
+}
+footer {
+  background-color: v.$--dark-blue-footer-back;
+}

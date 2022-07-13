@@ -1,0 +1,21 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+$--fs-root: 14px;
+$--ff-body: "Open Sans", sans-serif;
+$--ff-headings: "Raleway", sans-serif;
+$--fw-bold: 700;
+$--fw-regular: 400;
+
+// Colors
+$--dark-blue-header-and-email-back: hsl(217, 28%, 15%);
+$--dark-blue-main-back: hsl(218, 28%, 13%);
+$--dark-blue-footer-back: hsl(216, 53%, 9%);
+$--dark-blue-test-back: hsl(219, 30%, 18%);
+
+$--cyan-accent: hsl(176, 68%, 64%);
+$--blue-acent: hsl(198, 60%, 50%);
+$--light-red-accent: hsl(0, 100%, 63%);
+
+$--white-neutral: hsl(0, 0%, 100%);
