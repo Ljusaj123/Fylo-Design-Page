@@ -45,3 +45,9 @@ header {
     }
   }
 }
+
+@include media-750 {
+  header {
+    padding: 1rem;
+  }
+}
