@@ -46,5 +46,10 @@
       margin-bottom: 3rem;
       margin-right: 0rem;
     }
+
+    .features-text-container a {
+      color: $cyan-accent;
+      text-decoration: underline;
+    }
   }
 }
