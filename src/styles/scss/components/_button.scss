@@ -1,0 +1,15 @@
+@use "../base/" as *;
+
+.button {
+  background-color: $cyan-accent;
+  border-radius: 30px;
+  padding: 1rem 5rem;
+  cursor: pointer;
+  color: $white-neutral;
+  border: none;
+  transition: all 0.5s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
