@@ -4,6 +4,7 @@ import SignIn from "./modules/SignIn";
 import Testimonials from "./modules/Testimonials";
 import Footer from "./modules/Footer";
 import Header from "./modules/Header";
+import "./styles/css/styles.css";
 
 function App() {
   return (
