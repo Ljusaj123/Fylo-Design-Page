@@ -25,6 +25,11 @@ function Header() {
           </p>
           <button className="button">Get Started</button>
         </div>
+        <img
+          src="./images/bg-curvy-desktop.svg"
+          alt="aaaaaaaa"
+          id="background-header"
+        />
       </div>
     </header>
   );

@@ -2,6 +2,7 @@
 
 header {
   background-color: $dark-blue-header-and-email-back;
+  position: relative;
   height: 120vh;
   width: 100%;
   @include universal-flex-display(center, center);
@@ -32,6 +33,7 @@ header {
         text-align: center;
         line-height: 1.5;
         max-width: 700px;
+        z-index: 10;
       }
 
       .intro-pic {
@@ -41,7 +43,18 @@ header {
       .intro-text {
         max-width: 550px;
         text-align: center;
+        z-index: 10;
       }
+    }
+
+    #background-header {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 30vh;
+      z-index: 1;
     }
   }
 }
