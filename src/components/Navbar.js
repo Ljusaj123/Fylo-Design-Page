@@ -7,7 +7,9 @@ const Navbar = () => {
         {list.map((li, index) => {
           return (
             <li className="list" key={index}>
-              <a href="/">{li}</a>
+              <a href="/" className="item">
+                {li}
+              </a>
             </li>
           );
         })}

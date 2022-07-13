@@ -9,7 +9,7 @@
     max-width: 400px;
     @include universal-flex-display(space-between, center);
 
-    li a {
+    .list .item {
       font-size: 1.1rem;
 
       &:hover {
