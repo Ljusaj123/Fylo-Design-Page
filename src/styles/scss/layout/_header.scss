@@ -1,0 +1,47 @@
+@use "../base/" as *;
+
+header {
+  background-color: $dark-blue-header-and-email-back;
+  height: 120vh;
+  width: 100%;
+  @include universal-flex-display(center, center);
+  padding: 3rem;
+
+  .header-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .logo-container {
+      @include universal-flex-display(flex-start, center);
+
+      #logo {
+        width: clamp(50px, 50%, 200px);
+      }
+    }
+
+    .intro-container {
+      grid-column: 1 / span 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      .intro-title {
+        text-align: center;
+        line-height: 1.5;
+        max-width: 700px;
+      }
+
+      .intro-pic {
+        width: clamp(300px, 70%, 700px);
+      }
+
+      .intro-text {
+        max-width: 550px;
+        text-align: center;
+      }
+    }
+  }
+}
