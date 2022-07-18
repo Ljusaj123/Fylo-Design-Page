@@ -7,12 +7,14 @@
   &-container {
     height: 100%;
     width: 100%;
+    min-width: 220px;
     @include universal-flex-display(space-evenly, center);
   }
 }
 
 @include media-750 {
   .navigation {
-    justify-self: center;
+    margin-right: 1rem;
+    // justify-self: center;
   }
 }

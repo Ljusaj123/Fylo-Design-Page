@@ -59,6 +59,7 @@ footer {
 .navigation-container {
   height: 100%;
   width: 100%;
+  min-width: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +73,7 @@ footer {
 
 @media screen and (max-width: 750px) {
   .navigation {
-    justify-self: center;
+    margin-right: 1rem;
   }
 }
 .button {
@@ -112,7 +113,7 @@ header .header-container {
   height: 100%;
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 2rem;
+  row-gap: 2rem;
 }
 header .header-container .logo-container {
   display: -webkit-box;
