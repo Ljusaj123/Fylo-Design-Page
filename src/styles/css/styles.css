@@ -12,6 +12,7 @@ body {
   color: hsl(0deg, 0%, 100%);
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
+  background-color: hsl(218deg, 28%, 13%);
 }
 
 h1,
@@ -185,7 +186,6 @@ header .header-container #background-header {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: hsl(218deg, 28%, 13%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,7 +237,6 @@ header .header-container #background-header {
   }
 }
 .features {
-  background-color: hsl(218deg, 28%, 13%);
   width: 100%;
   min-height: 80vh;
   height: -webkit-fit-content;
