@@ -2,7 +2,7 @@
 
 .features {
   width: 100%;
-  min-height: 80vh;
+  min-height: 70vh;
   height: fit-content;
   @include universal-flex-display(center, flex-start);
   padding: 2rem;
@@ -38,17 +38,21 @@
 }
 
 @include media-750 {
-  .features .features-container {
-    flex-direction: column;
+  .features {
+    min-height: 50vh;
+    padding-bottom: 4rem;
+    .features-container {
+      flex-direction: column;
 
-    .features-image-container {
-      margin-bottom: 3rem;
-      margin-right: 0rem;
-    }
+      .features-image-container {
+        margin-bottom: 3rem;
+        margin-right: 0rem;
+      }
 
-    .features-text-container a {
-      color: $cyan-accent;
-      text-decoration: underline;
+      .features-text-container a {
+        color: $cyan-accent;
+        text-decoration: underline;
+      }
     }
   }
 }

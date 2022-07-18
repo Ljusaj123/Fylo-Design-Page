@@ -1,0 +1,58 @@
+@use "../base/" as *;
+
+.card {
+  width: clamp(250px, 90%, 600px);
+  @include universal-flex-display(center, center);
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: $dark-blue-test-back;
+  padding: 2rem;
+
+  justify-self: center;
+
+  &-user {
+    width: 100%;
+    margin-top: 2rem;
+    @include universal-flex-display(flex-start, center);
+
+    &__image {
+      margin-right: 1rem;
+      img {
+        border-radius: 50%;
+        width: 50px;
+      }
+    }
+
+    &__data {
+      #name {
+        font-weight: $fw-bold;
+      }
+    }
+  }
+}
+
+@include media-750 {
+  .card {
+    padding: 1rem;
+
+    &-user {
+      width: 100%;
+      margin-top: 0.5rem;
+      @include universal-flex-display(flex-start, center);
+
+      &__image {
+        margin-right: 1rem;
+        img {
+          border-radius: 50%;
+          width: 50px;
+        }
+      }
+
+      &__data {
+        #name {
+          font-weight: $fw-bold;
+        }
+      }
+    }
+  }
+}
