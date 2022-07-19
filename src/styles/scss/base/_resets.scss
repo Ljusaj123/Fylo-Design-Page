@@ -43,6 +43,7 @@ a {
 }
 li {
   list-style: none;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
 footer {
