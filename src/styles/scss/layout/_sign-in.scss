@@ -1,0 +1,48 @@
+@use "../base/" as *;
+
+.sign-in {
+  background-color: $dark-blue-header-and-email-back;
+  width: clamp(300px, 80%, 1100px);
+  padding: 3rem;
+  position: absolute;
+  top: -25%;
+  border-radius: 5px;
+
+  &-container {
+    @include universal-flex-display(center, center);
+    flex-direction: column;
+
+    .text-container {
+      text-align: center;
+    }
+
+    .input-button-container {
+      @include universal-flex-display(center, center);
+      margin-top: 2rem;
+
+      input {
+        margin-right: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        padding: 1rem 2rem;
+        width: 380px;
+      }
+    }
+  }
+}
+
+@include media-750 {
+  .sign-in {
+    padding: 1.5rem;
+    .sign-in-container .input-button-container {
+      flex-direction: column;
+
+      input {
+        margin-bottom: 2rem;
+        margin-right: 0;
+        width: 250px;
+      }
+    }
+  }
+}
