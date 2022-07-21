@@ -163,6 +163,16 @@ li {
     font-weight: 700;
   }
 }
+.social-icon {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.social-icon:hover {
+  color: hsl(198deg, 60%, 50%);
+}
+
 header {
   background-color: hsl(217deg, 28%, 15%);
   position: relative;
@@ -508,6 +518,7 @@ footer .footer-container .footer-text-container .contact .row {
 footer .footer-container .footer-text-container .contact-us li,
 footer .footer-container .footer-text-container .about-us li {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 footer .footer-container .footer-text-container .social-icons {
   display: -webkit-box;
@@ -519,9 +530,6 @@ footer .footer-container .footer-text-container .social-icons {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-footer .footer-container .footer-text-container .social-icons svg {
-  font-size: clamp(1.4rem, 3.5vw, 2rem);
 }
 
 @media screen and (max-width: 1024px) {
