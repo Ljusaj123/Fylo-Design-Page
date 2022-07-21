@@ -48,14 +48,12 @@ footer {
       .about-us {
         li {
           margin-bottom: 1rem;
+          cursor: pointer;
         }
       }
 
       .social-icons {
         @include universal-flex-display(center, flex-start);
-        svg {
-          font-size: clamp(1.4rem, 3.5vw, 2rem);
-        }
       }
     }
   }
