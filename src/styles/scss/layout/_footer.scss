@@ -1,0 +1,132 @@
+@use "../base/" as *;
+
+footer {
+  background-color: $dark-blue-footer-back;
+  position: relative;
+  min-height: 75vh;
+  height: fit-content;
+  @include universal-flex-display(center, end);
+
+  .footer-container {
+    width: clamp(400px, 95%, 1700px);
+    margin: 0 auto;
+    min-height: 80%;
+    @include universal-flex-display(center, center);
+    flex-direction: column;
+
+    .logo-container {
+      width: 100%;
+      @include universal-flex-display(flex-start, center);
+    }
+
+    .footer-text-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 30% 25% 10% 10% 25%;
+      min-height: 30vh;
+      margin-top: 3rem;
+
+      .icon {
+        margin-right: 2rem;
+      }
+
+      .location {
+        @include universal-flex-display(center, flex-start);
+        max-width: 400px;
+      }
+
+      .contact {
+        padding-left: 1rem;
+        .row {
+          width: 100%;
+          margin-bottom: 1rem;
+          @include universal-flex-display(flex-start, center);
+        }
+      }
+
+      .contact-us,
+      .about-us {
+        li {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .social-icons {
+        @include universal-flex-display(center, flex-start);
+        svg {
+          font-size: clamp(1.4rem, 3.5vw, 2rem);
+        }
+      }
+    }
+  }
+}
+
+@include media-1024 {
+  footer {
+    min-height: 95vh;
+    .footer-container {
+      .footer-text-container {
+        padding: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 2rem;
+
+        .location {
+          width: 300px;
+        }
+
+        .contact {
+          width: 300px;
+          justify-self: end;
+          grid-column: 2 / span 2;
+        }
+        .contact-us,
+        .about-us {
+          width: 150px;
+        }
+        .about-us {
+          margin-left: 3rem;
+        }
+        .social-icons {
+          @include universal-flex-display(flex-start, flex-start);
+        }
+      }
+    }
+  }
+}
+
+@include media-750 {
+  footer {
+    min-height: 120vh;
+    .footer-container {
+      .logo-container {
+        padding-left: 2rem;
+      }
+      .footer-text-container {
+        padding: 0 2rem;
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+
+        .location {
+          width: 300px;
+        }
+
+        .contact {
+          padding: 0;
+          justify-self: flex-start;
+          grid-column: initial;
+        }
+        .contact-us,
+        .about-us {
+          width: 150px;
+        }
+        .about-us {
+          margin-left: 0rem;
+        }
+        .social-icons {
+          @include universal-flex-display(center, flex-start);
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
