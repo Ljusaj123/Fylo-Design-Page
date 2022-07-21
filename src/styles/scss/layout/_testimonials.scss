@@ -1,21 +1,22 @@
 @use "../base/" as *;
 
 .testimonials {
-  min-height: 50vh;
+  min-height: 80vh;
   height: max-content;
   padding: 1rem 3rem;
   @include universal-flex-display(center, center);
+  margin-bottom: 10rem;
 
   &-container {
     display: grid;
-    padding-left: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
     row-gap: 3rem;
   }
 }
-
-@include media-750 {
+@include media-1024 {
   .testimonials {
-    padding: 1rem;
+    min-height: 120vh;
+    padding: 3rem 1rem;
+    @include universal-flex-display(center, flex-start);
   }
 }
