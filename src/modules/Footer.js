@@ -40,9 +40,9 @@ function Footer() {
             <li>Privacy</li>
           </div>
           <div className="social-icons">
-            <RiFacebookCircleLine className="icon" />
-            <TbBrandTwitter className="icon" />
-            <TbBrandInstagram className="icon" />
+            <RiFacebookCircleLine className="icon social-icon" />
+            <TbBrandTwitter className="icon social-icon" />
+            <TbBrandInstagram className="icon social-icon" />
           </div>
         </div>
       </div>
