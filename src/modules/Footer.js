@@ -1,6 +1,7 @@
 import React from "react";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { TbBrandTwitter, TbBrandInstagram } from "react-icons/tb";
+import SignIn from "./SignIn";
 
 function Footer() {
   return (
@@ -11,19 +12,19 @@ function Footer() {
         </div>
         <div className="footer-text-container">
           <div className="location">
-            <img src="./images/icon-location.svg" alt="" />
+            <img src="./images/icon-location.svg" alt="" className="icon" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
           </div>
           <div className="contact">
-            <div className="telephone">
-              <img src="./images/icon-phone.svg" alt="phone" />
+            <div className="row telephone">
+              <img src="./images/icon-phone.svg" alt="phone" className="icon" />
               <p> +1-543-123-4567</p>
             </div>
-            <div className="email">
-              <img src="./images/icon-email.svg" alt="email" />
+            <div className="row email">
+              <img src="./images/icon-email.svg" alt="email" className="icon" />
               <p>example@fylo.com</p>
             </div>
           </div>
@@ -39,12 +40,13 @@ function Footer() {
             <li>Privacy</li>
           </div>
           <div className="social-icons">
-            <RiFacebookCircleLine />
-            <TbBrandTwitter />
-            <TbBrandInstagram />
+            <RiFacebookCircleLine className="icon" />
+            <TbBrandTwitter className="icon" />
+            <TbBrandInstagram className="icon" />
           </div>
         </div>
       </div>
+      <SignIn />
     </footer>
   );
 }
