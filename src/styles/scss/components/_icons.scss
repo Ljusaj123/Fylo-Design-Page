@@ -1,0 +1,11 @@
+@use "../base/" as *;
+
+.social-icon {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $blue-acent;
+  }
+}
